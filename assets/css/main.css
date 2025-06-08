@@ -678,7 +678,7 @@ h6 {
   z-index: 9999;
   background-color: #fff;
   border-radius: 8px;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in, box-shadow .15s ease-out;
 }
 
 .scroll-top i {
@@ -696,6 +696,7 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -1724,3 +1725,88 @@ section,
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   font-family: var(--heading-font) !important;
 }
+
+/*** Service Start ***/
+.service .service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.3);
+}
+
+.service .service-item .service-img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.service .service-item .service-img img {
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-img img {
+    transform: scale(1.2);
+}
+
+.service .service-item .service-img::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgba(121, 149, 240, 0.4);
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-img::after {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.service .service-item .service-content {
+    position: relative;
+}
+
+.service .service-item .service-content::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+
+
+.service .service-item:hover .service-content::after {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.service .service-item .service-content .service-content-inner {
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-content .service-content-inner {
+    position: relative;
+    color: var(--accent-color) !important;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.service .service-item:hover .service-content .service-content-inner a.h4 {
+    color: var(--accent-color) !important;
+    transition: 0.5s;
+}
+
+.service .service-item:hover .service-content .service-content-inner a.h4:hover {
+    color: var(--accent-color) !important;
+}
+
+/*** Service End ***/
