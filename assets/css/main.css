@@ -674,13 +674,11 @@ h6 {
   visibility: hidden;
   opacity: 0;
   right: 40px;
-  bottom: 15px;
-  z-index: 99999;
-  background-color: var(--accent-color);
-  height: 40px;
-  padding: 2px;
-  border-radius: 4px;
-  transition: all 0.4s;
+  bottom: 20px;
+  z-index: 9999;
+  background-color: #fff;
+  border-radius: 8px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .scroll-top i {
@@ -690,9 +688,9 @@ h6 {
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
+  box-shadow: 0px 0px 4px 2px rgb(255 176 59 / 54%);
 }
+
 
 .scroll-top.active {
   visibility: visible;
@@ -1691,4 +1689,38 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+/* Style the Google Translate dropdown like Bootstrap 5 select */
+#google_translate_element .goog-te-gadget-simple {
+  padding: 4px 4px;
+  font-size: 10pt;
+  font-family: var(--nav-font);
+  color: #212529;
+  background: rgba(255, 176, 59, 0.1);
+  background-clip: padding-box;
+  border: 2px solid var(--accent-color);
+  border-radius: 6px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  appearance: none;
+  cursor: pointer;
+}
+#google_translate_element .goog-te-gadget-simple span[style*="border-left"] {
+  border-left: 1px solid var(--accent-color) !important;
+}
+
+#google_translate_element .goog-te-gadget-simple span[aria-hidden="true"] {
+ color: var(--accent-color) !important;
+}
+#google_translate_element .goog-te-gadget-simple span {
+ color: var(--accent-color) !important;
+}
+
+.skiptranslate iframe {
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(255, 176, 59, 0.3); /* soft orange accent */
+  background: rgba(255, 176, 59, 0.1);
+  background-clip: padding-box;
+  border: 2px solid var(--accent-color);
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  font-family: var(--heading-font) !important;
 }
